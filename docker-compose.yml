@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    image: goslinuly-devops
+    container_name: goslinuly-compose
+    ports:
+      - "5051:5000"
+    environment:
+      STUDENT_NAME: Goslinuly
+      STUDENT_SURNAME: Goslinuly
+      STUDENT_GROUP: Goslinuly
+      STUDENT_ID: "gosling"
+    restart: unless-stopped
